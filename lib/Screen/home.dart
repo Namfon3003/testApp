@@ -43,10 +43,14 @@ class _HomeState extends State<Home> {
                 height: 100,
               ),
               Spacer(),
-              Image.asset(
-                "images/buttonBar/account.png",
-                width: 35,
-                height: 35,
+
+              //Log Out
+              MaterialButton(
+                onPressed: () {},
+                child: Icon(
+                  Icons.logout,
+                  size: 35,
+                ),
               ),
               SizedBox(
                 width: 10,
