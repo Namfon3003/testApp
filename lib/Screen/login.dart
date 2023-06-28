@@ -19,9 +19,9 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffAD3E32),
+      backgroundColor: const Color(0xffAD3E32),
       body: Padding(
-        padding: EdgeInsets.only(left: 20, right: 20),
+        padding: const EdgeInsets.only(left: 20, right: 20),
         child: ListView(children: [
           Image.asset(
             "images/BBQ_login.gif",
@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
             height: 300,
           ),
 
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
 
@@ -41,13 +41,13 @@ class _LoginState extends State<Login> {
                 Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Color.fromARGB(255, 219, 218, 218)
+                        color: const Color.fromARGB(255, 219, 218, 218)
                             .withOpacity(0.5)),
                     child: TextFormField(
                       controller: emailController,
                       keyboardType: TextInputType.emailAddress,
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                      decoration: InputDecoration(
+                      style: const TextStyle(color: Colors.white, fontSize: 20),
+                      decoration: const InputDecoration(
                           contentPadding: EdgeInsets.symmetric(vertical: 15),
                           border: InputBorder.none,
                           hintText: "Email Adress",
@@ -59,7 +59,7 @@ class _LoginState extends State<Login> {
                               TextStyle(fontSize: 18, color: Colors.white)),
                     )),
 
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
 
@@ -67,12 +67,13 @@ class _LoginState extends State<Login> {
                 Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Color.fromARGB(255, 219, 218, 218)
+                        color: const Color.fromARGB(255, 219, 218, 218)
                             .withOpacity(0.5)),
                     child: TextFormField(
                       controller: passwordController,
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                      decoration: InputDecoration(
+                      obscureText: true,
+                      style: const TextStyle(color: Colors.white, fontSize: 20),
+                      decoration: const InputDecoration(
                           contentPadding: EdgeInsets.symmetric(vertical: 15),
                           border: InputBorder.none,
                           hintText: "Password",
@@ -87,23 +88,32 @@ class _LoginState extends State<Login> {
             ),
           ),
 
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
 
           //Login button
           MaterialButton(
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Home()));
+              String email = emailController.text;
+              String password = passwordController.text;
+              if (email.isNotEmpty && password.isNotEmpty) {
+                log.d("pass");
+                // loginUsers();
+              } else {
+                valadateFormLogin(context);
+                //log.d("not pass");
+              }
+              // Navigator.push(context,
+              //     MaterialPageRoute(builder: (context) => const Home()));
             },
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(30),
               ),
-              padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15),
-              child: Text("Login",
+              padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
+              child: const Text("Login",
                   style: TextStyle(
                       color: Color.fromARGB(255, 94, 93, 93),
                       fontSize: 18,
@@ -113,18 +123,56 @@ class _LoginState extends State<Login> {
           //Create New Account?   Button
           MaterialButton(
             onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Register()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Register()));
             },
-            child: Text("Create New Account? ",
+            child: const Text("Create New Account? ",
                 style: TextStyle(color: Colors.white, fontSize: 16)),
           ),
 
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
         ]),
       ),
+    );
+  }
+
+  Future<dynamic> valadateFormLogin(BuildContext context) {
+    return showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          icon: const Icon(
+            Icons.warning,
+            color: Color(0xffAD3E32),
+            size: 25,
+          ),
+          title: const Center(
+              child: Text(
+            'เข้าสู่ระบบไม่สำเร็จ!',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Color(0xffAD3E32),
+            ),
+          )),
+          content: const Text(
+            'กรุณากรอก Email และ Password',
+            style: TextStyle(fontSize: 18),
+          ),
+          actions: [
+            TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop(); // Close the dialog
+                },
+                child: const Text(
+                  "ตกลง",
+                  style: TextStyle(color: Colors.black),
+                ))
+          ],
+        );
+      },
     );
   }
 }
