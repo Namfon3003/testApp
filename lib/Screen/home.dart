@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
               ),
               Spacer(),
 
-              //Log Out
+              //Log Out Icon
               MaterialButton(
                 onPressed: () {},
                 child: Icon(
