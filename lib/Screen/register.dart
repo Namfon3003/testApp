@@ -19,7 +19,7 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(left: 20, right: 20),
+        padding: const EdgeInsets.only(left: 20, right: 20),
         child: ListView(children: [
           Image.asset(
             "images/BBQ_register.gif",
@@ -27,7 +27,7 @@ class _RegisterState extends State<Register> {
             height: 300,
           ),
 
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
 
@@ -36,25 +36,25 @@ class _RegisterState extends State<Register> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Register",
+                const Text("Register",
                     style: TextStyle(
                         color: Color.fromARGB(255, 145, 144, 143),
                         fontSize: 18,
                         fontWeight: FontWeight.bold)),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 //Your Name...   Input
                 Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Color.fromARGB(255, 187, 186, 186)
+                        color: const Color.fromARGB(255, 187, 186, 186)
                             .withOpacity(0.5)),
                     child: TextFormField(
                       controller: nameController,
                       keyboardType: TextInputType.name,
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                      decoration: InputDecoration(
+                      style: const TextStyle(color: Colors.white, fontSize: 20),
+                      decoration: const InputDecoration(
                           contentPadding: EdgeInsets.symmetric(vertical: 15),
                           border: InputBorder.none,
                           hintText: "Your Name",
@@ -67,7 +67,7 @@ class _RegisterState extends State<Register> {
                               TextStyle(fontSize: 18, color: Colors.grey)),
                     )),
 
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
 
@@ -75,13 +75,13 @@ class _RegisterState extends State<Register> {
                 Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Color.fromARGB(255, 187, 186, 186)
+                        color: const Color.fromARGB(255, 187, 186, 186)
                             .withOpacity(0.5)),
                     child: TextFormField(
                       controller: emailController,
                       keyboardType: TextInputType.emailAddress,
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                      decoration: InputDecoration(
+                      style: const TextStyle(color: Colors.white, fontSize: 20),
+                      decoration: const InputDecoration(
                           contentPadding: EdgeInsets.symmetric(vertical: 15),
                           border: InputBorder.none,
                           hintText: "Email Adress",
@@ -93,7 +93,7 @@ class _RegisterState extends State<Register> {
                               TextStyle(fontSize: 18, color: Colors.grey)),
                     )),
 
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
 
@@ -101,13 +101,13 @@ class _RegisterState extends State<Register> {
                 Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Color.fromARGB(255, 187, 186, 186)
+                        color: const Color.fromARGB(255, 187, 186, 186)
                             .withOpacity(0.5)),
                     child: TextFormField(
                       controller: passwordController,
                       keyboardType: TextInputType.name,
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                      decoration: InputDecoration(
+                      style: const TextStyle(color: Colors.white, fontSize: 20),
+                      decoration: const InputDecoration(
                           contentPadding: EdgeInsets.symmetric(vertical: 15),
                           border: InputBorder.none,
                           hintText: "Password",
@@ -125,7 +125,7 @@ class _RegisterState extends State<Register> {
             ),
           ),
 
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
 
@@ -134,11 +134,11 @@ class _RegisterState extends State<Register> {
             onPressed: () {},
             child: Container(
               decoration: BoxDecoration(
-                color: Color(0xffAD3E32),
+                color: const Color(0xffAD3E32),
                 borderRadius: BorderRadius.circular(30),
               ),
-              padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15),
-              child: Text("Register",
+              padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
+              child: const Text("Register",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18,
@@ -147,7 +147,7 @@ class _RegisterState extends State<Register> {
           ),
           //Create New Account?   Button
 
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
         ]),

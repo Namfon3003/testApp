@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Image.asset(
@@ -36,35 +36,35 @@ class _HomeState extends State<Home> {
                 width: 35,
                 height: 35,
               ),
-              Spacer(),
+              const Spacer(),
               Image.asset(
                 "images/BBQ_register.gif",
                 width: 100,
                 height: 100,
               ),
-              Spacer(),
+              const Spacer(),
 
               //Log Out Icon
               MaterialButton(
                 onPressed: () {},
-                child: Icon(
+                child: const Icon(
                   Icons.logout,
                   size: 35,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           )
 
           // Image Slide Show
           ,
           ImageSlideshow(
-            indicatorColor: Color.fromARGB(255, 156, 50, 8),
+            indicatorColor: const Color.fromARGB(255, 156, 50, 8),
             onPageChanged: (value) {
               debugPrint('Page changed: $value');
             },
@@ -105,11 +105,11 @@ class _HomeState extends State<Home> {
                       width: 30,
                       height: 30,
                     ),
-                    Text("Promotion",
+                    const Text("Promotion",
                         style: TextStyle(color: Colors.black, fontSize: 16)),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Column(
@@ -119,11 +119,11 @@ class _HomeState extends State<Home> {
                       width: 30,
                       height: 30,
                     ),
-                    Text("Point ",
+                    const Text("Point ",
                         style: TextStyle(color: Colors.black, fontSize: 16)),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Column(
@@ -133,11 +133,11 @@ class _HomeState extends State<Home> {
                       width: 30,
                       height: 30,
                     ),
-                    Text("Menu",
+                    const Text("Menu",
                         style: TextStyle(color: Colors.black, fontSize: 16)),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Column(
@@ -147,17 +147,17 @@ class _HomeState extends State<Home> {
                       width: 30,
                       height: 30,
                     ),
-                    Text("New",
+                    const Text("New",
                         style: TextStyle(color: Colors.black, fontSize: 16)),
                   ],
                 ),
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 15, right: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -176,18 +176,18 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: Column(
               children: [
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.white,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Color(0xffDDDDDD),
                         blurRadius: 6.0,
@@ -199,13 +199,13 @@ class _HomeState extends State<Home> {
                   child: Padding(
                     padding: const EdgeInsets.all(10),
                     child: Row(children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                           radius: 40,
                           backgroundImage: AssetImage("images/menu/menu1.jpg")),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
@@ -226,36 +226,36 @@ class _HomeState extends State<Home> {
                           ),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       GestureDetector(
                         onTap: () => {},
                         child: Container(
-                          padding: EdgeInsets.all(5),
+                          padding: const EdgeInsets.all(5),
                           decoration: BoxDecoration(
                             color: Colors.black,
                             //border: Border.all(width: 1.0, color: Colors.blue),
                             borderRadius: BorderRadius.circular(5),
                           ),
-                          child: Text(
+                          child: const Text(
                             'Add',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                     ]),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.white,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Color(0xffDDDDDD),
                         blurRadius: 6.0,
@@ -267,13 +267,13 @@ class _HomeState extends State<Home> {
                   child: Padding(
                     padding: const EdgeInsets.all(10),
                     child: Row(children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                           radius: 40,
                           backgroundImage: AssetImage("images/menu/menu2.jpg")),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
@@ -294,36 +294,36 @@ class _HomeState extends State<Home> {
                           ),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       GestureDetector(
                         onTap: () => {},
                         child: Container(
-                          padding: EdgeInsets.all(5),
+                          padding: const EdgeInsets.all(5),
                           decoration: BoxDecoration(
                             color: Colors.black,
                             //border: Border.all(width: 1.0, color: Colors.blue),
                             borderRadius: BorderRadius.circular(5),
                           ),
-                          child: Text(
+                          child: const Text(
                             'Add',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                     ]),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.white,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Color(0xffDDDDDD),
                         blurRadius: 6.0,
@@ -335,13 +335,13 @@ class _HomeState extends State<Home> {
                   child: Padding(
                     padding: const EdgeInsets.all(10),
                     child: Row(children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                           radius: 40,
                           backgroundImage: AssetImage("images/menu/menu4.jpg")),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
@@ -362,23 +362,23 @@ class _HomeState extends State<Home> {
                           ),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       GestureDetector(
                         onTap: () => {},
                         child: Container(
-                          padding: EdgeInsets.all(5),
+                          padding: const EdgeInsets.all(5),
                           decoration: BoxDecoration(
                             color: Colors.black,
                             //border: Border.all(width: 1.0, color: Colors.blue),
                             borderRadius: BorderRadius.circular(5),
                           ),
-                          child: Text(
+                          child: const Text(
                             'Add',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                     ]),
